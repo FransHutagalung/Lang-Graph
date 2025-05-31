@@ -3,3 +3,4 @@ langgraph
 langchain-core
 python-dotenv
 langchain-openai
+langchain-community

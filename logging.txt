@@ -1,0 +1,19 @@
+Conversation History : 
+You : 	hello
+AI : Hello! How can I assist you today?
+You : how are you
+AI : I'm an AI, so I don't have feelings like humans do. But thank you for asking! How can I help you today?
+You : tell me about London City
+AI : London City is a term that may refer to different things:
+
+1. **Financial District (Fenchurch Street)**:
+   - London City proper refers to the area around this financial hub, which includes St. Marylebone, Moorgate, and Bishopsgate.
+   
+2. **London City Airport** (LCY):
+   - This is a smaller airport located in East London, offering flights to various destinations.
+
+3. **London City Cruise Terminal**:
+   - This terminal serves as a port for cruise ships visiting the city.
+
+So, when referring to "London City," it's important to clarify which aspect of the city you are talking about.
+End of Conversation
