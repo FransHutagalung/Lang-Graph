@@ -26,7 +26,7 @@ def add(a : int , b : int) -> int :
 
 tools = [add]
 
-model = ChatGoogleGenerativeAI(model="gemini-pro", api_key=api_key).bind_tools(tools)
+model = ChatGoogleGenerativeAI(model="gemini-1.5-flash-latest", api_key=api_key ).bind_tools(tools)
 
 def model_call(state : AgentState) -> AgentState :
     system_prompt = SystemMessage(content="You are my AI Assistant , please answer my query to the best your ability")
@@ -72,7 +72,7 @@ def print_stream(stream) :
             message.pretty_print()
 
 inputs = {
-    "messages": [HumanMessage(content="What is 2 + 3?")]
+    "messages": [HumanMessage(content="What is 2 + 3? . add 20 and 45")]
 }
 # print_stream(agent.stream(inputs , stream_mode = "values"))
 print_stream(agent.stream(inputs, stream_mode="values"))

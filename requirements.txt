@@ -2,8 +2,10 @@ typing
 langgraph
 langchain-core
 python-dotenv
-langchain-openai
-langchain-ollama
+# langchain-openai
+# langchain-ollama
 langchain-community
 langchain-google-genai 
 google-generativeai
+pypdf
+langchain-chroma

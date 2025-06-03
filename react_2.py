@@ -25,7 +25,13 @@ def add(a: int, b: int) -> int:
     """Adds two integers and returns the result."""
     return a + b
 
-tools = [add]
+@tool
+def multiply(a: int, b: int) -> int:
+    """Multiplies two integers and returns the result."""
+    return a * b
+
+
+tools = [add , multiply]
 
 # Initialize model and bind tools
 model = ChatGoogleGenerativeAI(model="gemini-1.5-flash-latest", api_key=api_key ).bind_tools(tools)
@@ -40,8 +46,7 @@ def model_call(state: AgentState) -> AgentState:
 def should_continue(state: AgentState) -> str:
     messages = state["messages"]
     last_message = messages[-1]
-    
-    # Gemini tool invocation is usually in 'tool_calls' attribute
+
     tool_calls = getattr(last_message, "tool_calls", None)
     if tool_calls:
         return "continue"
@@ -77,8 +82,11 @@ def print_stream(stream):
             print(message)
 
 # Test input
+
+message = HumanMessage(content="Please first add 4 and 5 using tools, then multiply the result by 2 using tools.")
+
 inputs = {
-    "messages": [HumanMessage(content="What is 2 + 3?")]
+    "messages": [message]
 }
 
 print_stream(agent.stream(inputs, stream_mode="values"))
