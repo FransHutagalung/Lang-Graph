@@ -9,3 +9,4 @@ langchain-google-genai
 google-generativeai
 pypdf
 langchain-chroma
+pandas
